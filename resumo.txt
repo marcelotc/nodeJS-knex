@@ -1,1 +1,19 @@
 yarn add express
+
+yarn add knex pg
+
+/*=========psql=========*/
+
+CREATE DATABASE todo_db;
+
+\c todo_db
+
+create table todo (id serial, title varchar(150),is_done boolean);
+
+\dt 
+
+insert into todo(title, is_done) values('first test', false);
+
+select * from todo;
+
+/*==========*/
