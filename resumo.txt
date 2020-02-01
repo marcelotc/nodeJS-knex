@@ -16,6 +16,10 @@ insert into todo(title, is_done) values('first test', false);
 
 select * from todo;
 
+alter table todo add primary key (id);
+
 /*==========*/
 
 yarn add body-parser
+
+yarn add concurrently
