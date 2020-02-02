@@ -1,9 +1,9 @@
 import React from 'react';
 
-const ListItem = ({ text }) => {
+const ListItem = ({ title, isDone }) => {
     return (
         <ul className="list-group-item">
-            {text}
+            {title} {isDone ? "Done" : "Not done"}
         </ul>
     );
 }

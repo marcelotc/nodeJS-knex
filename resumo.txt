@@ -23,3 +23,7 @@ alter table todo add primary key (id);
 yarn add body-parser
 
 yarn add concurrently
+
+yarn add axios
+
+yarn add loadash
