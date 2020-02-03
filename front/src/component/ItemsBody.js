@@ -29,8 +29,7 @@ const ItemsBody = () => {
                 (
                     <ListItems>
                         {todos && todos.map(todo =>
-                            <ListItem key={todo.id} title={todo.title} isDone={todo.is_done}></ListItem>
-
+                            <ListItem key={todo.id} id={todo.id} text={todo.title} isDone={todo.is_done}></ListItem>
                         )}
                     </ListItems>
                 )}

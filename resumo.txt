@@ -27,3 +27,5 @@ yarn add concurrently
 yarn add axios
 
 yarn add loadash
+
+yarn add react-router-dom
