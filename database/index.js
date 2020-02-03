@@ -1,7 +1,7 @@
 const options = process.env.NODE_ENV === 'production' ?
     {
         client: 'pg',
-        connection: process.env.DATABASE_URL, searchPath: ['public']
+        connection: process.env.DATABASE_URL
     } : {
         client: 'pg',
         connection: {
