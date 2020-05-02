@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import api from '../services/api';
+import axios from 'axios';
 import { withRouter } from 'react-router-dom';
 
 const SingleTodoEdit = (props) => {
@@ -17,7 +17,7 @@ const SingleTodoEdit = (props) => {
         const { id, history } = props;
 
         if (id) {
-            api.put(`/api/todo/${id}`, {
+            axios.put(`/api/todo/${id}`, {
                 title: title,
                 is_done: isDone === 'true'
             }).then(() => {
@@ -25,7 +25,7 @@ const SingleTodoEdit = (props) => {
                 props.toggleEdit()
             })
         } else {
-            api.post('/api/todo', {
+            axios.post('/api/todo', {
                 title: title,
                 is_done: isDone
             }).then(() => {

@@ -1,5 +1,5 @@
 import React from 'react';
-import api from '../services/api';
+import axios from 'axios';
 import { withRouter } from 'react-router-dom';
 
 const SingleTodoList = ({ title, isDone, onEdit, id, history }) => {
@@ -14,7 +14,7 @@ const SingleTodoList = ({ title, isDone, onEdit, id, history }) => {
                 </div>
                 <div className="d-flex justify-content-between align-items-end mt-5">
                     <button className="btn btn-link text-white" onClick={() => {
-                        api.delete(`/api/todo/${id}`).then(() => {
+                        axios.delete(`/api/todo/${id}`).then(() => {
                             history.push('/');
                         })
                     }}>Delete</button>

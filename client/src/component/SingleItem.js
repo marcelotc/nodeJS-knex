@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import api from '../services/api';
 import TodoCard from './TodoCard';
+import axios from 'axios';
 
 const SingleItem = (props) => {
     const [item, setItem] = useState();
@@ -9,7 +9,7 @@ const SingleItem = (props) => {
     useEffect(() => {
         async function loadItem() {
             const id = props.match.params.id;
-            const response = await api.get(`/api/todo/${id}`);
+            const response = await axios.get(`/api/todo/${id}`);
             setItem(response.data);
             setLoadItem(false);
         }
