@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import ListItems from './ListItems';
 import ListItem from './ListItem';
+import AddButton from './AddButton';
 import _ from 'lodash';
 import axios from 'axios';
 
@@ -25,6 +26,7 @@ const ItemsBody = () => {
 
     return (
         <>
+            <AddButton></AddButton>
             {loading ? (<h1>Loading...</h1>) :
                 (
                     <ListItems>

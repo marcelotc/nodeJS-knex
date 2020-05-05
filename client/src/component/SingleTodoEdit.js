@@ -37,20 +37,20 @@ const SingleTodoEdit = (props) => {
     return (
         <form onSubmit={handleSubmit}>
             <div className="form-group">
-                <label htmlFor="title">Title for todo</label>
+                <label htmlFor="title">Título</label>
                 <input name="title" type="text" className="form-control"
                     id="title" value={title || ''} onChange={(e) => setTitle(e.target.value)}></input>
             </div>
             <div className="form-group">
-                <label htmlFor="idDone">Todo completed?</label>
+                <label htmlFor="idDone">Tarefa completada?</label>
                 <select name="isDone" className="form-control"
                     id="is-done" value={isDone} onChange={(e) => setIsdone(e.target.value)}>
-                    <option value="true">Yes</option>
-                    <option value="false">No</option>
+                    <option value="true">Sim</option>
+                    <option value="false">Não</option>
                 </select>
                 <div className="d-flex justify-content-between align-items-center mt-3">
-                    <button type="submit" className="btn btn-primary">Submit</button>
-                    <button type="button" className="btn btn-danger" onClick={props.toggleEdit}>Cancel</button>
+                    <button type="submit" className="btn btn-primary">Enviar</button>
+                    <button type="button" className="btn btn-danger" onClick={props.toggleEdit}>Cancelar</button>
                 </div>
             </div>
         </form >

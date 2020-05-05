@@ -10,7 +10,7 @@ const SingleTodoList = ({ title, isDone, onEdit, id, history }) => {
                     <h4>{title}</h4>
                 </div>
                 <div className="card-text">
-                    {isDone ? 'This todo has been completed' : 'This todo has yet to be finished'}
+                    {isDone ? 'Tarefa completada' : 'Tarefa não completada'}
                 </div>
                 <div className="d-flex justify-content-between align-items-end mt-5">
                     <button className="btn btn-link text-white" onClick={() => {

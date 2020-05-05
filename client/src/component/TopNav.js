@@ -5,11 +5,8 @@ const TopNav = () => {
     return (
         <>
             <nav className="navbar navbar-expand-sm bg-dark navbar-dark mb-4">
-                <Link to="/" className="navbar-brand">Todo</Link>
+                <Link to="/" className="navbar-brand">Lista</Link>
             </nav>
-            <div className="navbar fixed-bottom">
-                <Link to="/new" className="btn btn-outline-primary w-100 p-3">Add new Todo</Link>
-            </div>
         </>
     )
 }
