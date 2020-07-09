@@ -5,6 +5,7 @@ const db = require('../../database');
 router.get('/', function (req, res) {
     db.select().from('todo').orderBy('id').then(function (data) {
         res.send(data);
+        console.log('tessste')
     });
     //select * from "todo"
 });
